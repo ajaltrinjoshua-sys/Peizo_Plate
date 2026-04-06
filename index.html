@@ -83,13 +83,14 @@ nav a:hover {
 
 /* SECTION */
 section {
-    padding: 80px 20px;
+    padding: 50px 20px;
 }
 
+/* CARD */
 .card {
     background: #1e293b;
     padding: 20px;
-    margin: 20px auto;
+    margin: 15px auto;
     max-width: 800px;
     border-radius: 12px;
     transition: 0.4s;
@@ -173,6 +174,7 @@ footer {
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#working">Working</a>
+    <a href="#extra">Details</a>
     <a href="#team">Team</a>
 </nav>
 
@@ -185,14 +187,31 @@ footer {
 <section id="about">
     <div class="card">
         <h2>🔹 Introduction</h2>
-        <p>This project converts human footsteps into electrical energy using piezoelectric plates and demonstrates real-world smart energy applications.</p>
+        <p>
+            The Piezoelectric Smart Energy System converts mechanical energy from human footsteps into electrical energy using piezoelectric sensors.
+        </p>
+        <p>
+            This project focuses on sustainable energy generation and aims to utilize human movement in crowded places like railway stations and malls.
+        </p>
     </div>
 </section>
 
 <section id="working">
     <div class="card">
         <h2>⚙️ Working Principle</h2>
-        <p>Mechanical pressure generates electrical voltage using the piezoelectric effect.</p>
+        <p>
+            The system works based on the piezoelectric effect where mechanical pressure generates electrical voltage.
+        </p>
+        <p>
+            When a person steps on the plate, pressure is applied, producing voltage which can be stored and used.
+        </p>
+
+        <ul>
+            <li>Step 1: Apply pressure</li>
+            <li>Step 2: Voltage generated</li>
+            <li>Step 3: Energy stored</li>
+            <li>Step 4: Output device powered</li>
+        </ul>
     </div>
 
     <div class="card">
@@ -200,16 +219,36 @@ footer {
         <div class="meter">
             <div class="fill"></div>
         </div>
-        <p>Simulated real-time energy generation</p>
+        <p>Simulated energy generation</p>
     </div>
+</section>
 
+<section id="extra">
     <div class="card">
         <h2>🌍 Applications</h2>
         <ul>
             <li>Smart Roads</li>
             <li>Railway Stations</li>
             <li>Shopping Malls</li>
-            <li>Renewable Energy Systems</li>
+            <li>Public Walkways</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>✅ Advantages</h2>
+        <ul>
+            <li>Eco-friendly</li>
+            <li>Renewable source</li>
+            <li>Low maintenance</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚠️ Limitations</h2>
+        <ul>
+            <li>Low power output</li>
+            <li>Needs multiple sensors</li>
+            <li>Efficiency varies</li>
         </ul>
     </div>
 </section>
