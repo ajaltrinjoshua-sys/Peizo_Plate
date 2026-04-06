@@ -73,16 +73,16 @@ nav a:hover {
     box-shadow: 0 0 20px #38bdf8;
 }
 
-/* SECTION */
+/* SECTIONS (FIXED GAP) */
 section {
-    padding: 100px 20px;
+    padding: 60px 20px;
 }
 
-/* CARDS */
+/* CARDS (FIXED GAP) */
 .card {
     background: #1e293b;
     padding: 25px;
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 900px;
     border-radius: 15px;
     opacity: 0;
@@ -100,17 +100,23 @@ section {
     box-shadow: 0 0 25px #0ea5e9;
 }
 
-h2 {
-    color: #38bdf8;
-    margin-bottom: 10px;
+/* EXTRA TIGHT FOR POWER SECTION */
+#power .card {
+    margin: 8px auto;
 }
 
-/* ENERGY FLOW ANIMATION */
+/* HEADINGS FIX */
+h2 {
+    color: #38bdf8;
+    margin-bottom: 5px;
+}
+
+/* ENERGY FLOW */
 .energy-flow {
     height: 6px;
     background: linear-gradient(90deg,transparent,#22c55e,#38bdf8,transparent);
     animation: flow 2s linear infinite;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 /* POWER BAR */
@@ -180,7 +186,7 @@ footer {
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#working">Working</a>
-    <a href="#power">Power Station</a>
+    <a href="#power">Power</a>
     <a href="#team">Team</a>
 </nav>
 
@@ -208,50 +214,43 @@ footer {
     <div class="card">
         <h2>⚙️ Working Principle</h2>
         <p>
-        When a person walks over the plate, pressure is applied. This pressure creates 
-        voltage due to the piezoelectric effect. Multiple plates connected together 
-        increase total power generation.
+        When a person walks over the plate, pressure is applied which generates voltage.
+        Multiple plates together increase power output and improve efficiency.
         </p>
 
         <div class="energy-flow"></div>
 
         <p>
-        The generated voltage is collected and stored for further use.
+        The energy produced is collected and stored in batteries for later use.
         </p>
     </div>
 </section>
 
-<!-- POWER STATION -->
+<!-- POWER -->
 <section id="power">
     <div class="card">
         <h2>🏭 Energy Storage & Power Station</h2>
         <p>
-        The small voltage generated from piezoelectric plates is first stored in batteries.
+        The generated energy is stored in batteries. This energy is then sent to a power station
+        where it is amplified using converters to increase voltage levels.
         </p>
 
         <div class="energy-flow"></div>
-
-        <p>
-        At the power station, this stored energy is passed through amplifiers and converters 
-        to increase the voltage level.
-        </p>
 
         <div class="meter">
             <div class="fill"></div>
         </div>
 
         <p>
-        After amplification, the electricity becomes usable for real-world applications 
-        such as charging EV bikes and electric cars.
+        After amplification, it becomes usable for real applications like EV charging.
         </p>
     </div>
 
     <div class="card">
         <h2>🚗 EV Charging Applications</h2>
         <p>
-        The amplified energy can be supplied to EV charging stations. 
-        This provides a renewable energy source for electric vehicles and reduces dependency 
-        on fossil fuels.
+        The amplified energy is used in charging stations for electric bikes and cars.
+        This promotes green energy and reduces pollution.
         </p>
     </div>
 </section>
@@ -277,7 +276,6 @@ function scrollToSection() {
     document.getElementById("about").scrollIntoView({behavior:"smooth"});
 }
 
-/* SCROLL ANIMATION */
 const cards = document.querySelectorAll('.card');
 
 window.addEventListener('scroll', () => {
@@ -285,7 +283,6 @@ window.addEventListener('scroll', () => {
 
     cards.forEach(card => {
         let top = card.getBoundingClientRect().top;
-
         if(top < trigger){
             card.classList.add('show');
         }
