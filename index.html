@@ -73,16 +73,16 @@ nav a:hover {
     box-shadow: 0 0 20px #38bdf8;
 }
 
-/* SECTIONS (FIXED GAP) */
+/* SECTIONS */
 section {
     padding: 60px 20px;
 }
 
-/* CARDS (FIXED GAP) */
+/* CARDS */
 .card {
     background: #1e293b;
     padding: 25px;
-    margin: 10px auto;
+    margin: 15px auto;   /* balanced spacing */
     max-width: 900px;
     border-radius: 15px;
     opacity: 0;
@@ -100,15 +100,15 @@ section {
     box-shadow: 0 0 25px #0ea5e9;
 }
 
-/* EXTRA TIGHT FOR POWER SECTION */
-#power .card {
-    margin: 8px auto;
+/* 🔥 FIX: EXTRA GAP BETWEEN POWER & EV */
+#power .card:first-child {
+    margin-bottom: 35px;
 }
 
-/* HEADINGS FIX */
+/* HEADINGS */
 h2 {
     color: #38bdf8;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* ENERGY FLOW */
@@ -178,9 +178,6 @@ footer {
     100% {background-position: 200px;}
 }
 </style>
-    #power .card:first-child {
-    margin-bottom: 30px;
-}
 </head>
 
 <body>
